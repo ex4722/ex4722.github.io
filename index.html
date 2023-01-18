@@ -1,6 +1,26 @@
-Hello World
-<br>
-<b> Hey their poopy face </b>
-<br>
-<h1> This site is under construction </h1>
+<!DOCTYPE html>
+<html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="app.js"></script>
+        <title>Document</title>
+
+    </head>
+
+    <body onload="init()" id="body">
+        <h1>Bugz Splat</h1>
+        <div class="alert info">
+            <p class="inner" id="msg">
+            Click Play Game to begin 
+            </p>
+        </div>
+        <button onclick="start()"> Play Game </button>
+
+        <iframe id="video" width="559" height="315" src="https://www.youtube.com/embed/mfr-7Zplae8?clip=UgkxKmEJHeWo7H_nPx1ecZ17K8W_ECFVwXbW&amp;clipt=ENi-BhjG9wY&autoplay=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <audio id="splat_audio" src="./splat2ogg-14668.mp3"></audio>
+    </body>
+</html>

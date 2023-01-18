@@ -1,0 +1,54 @@
+body{
+    background-color: orange;
+    display: grid;
+    grid-template-rows:  2fr .25fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+/* .dead_bug{ */
+/*             /1* width: 500px; */
+/*             height: 200px; */
+/*             object-fit: none; */
+/*             object-position: 50px 30px; *1/ */
+/* } */
+
+
+/* body {
+background-image: url(https://subtlepatterns.com/patterns/bedge_grunge.png);
+background-position: initial initial;
+background-repeat: initial initial;
+} */
+
+
+    @import url(https://fonts.googleapis.com/css?family=Lobster);
+    @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css);
+
+    h1 {
+        font-family: "Lobster";
+        text-align: center;
+    }
+
+    button {
+        color: orange;
+        background-color: rgb(47,77,42);
+        border: none;
+    }
+
+    /* Click me button stuff */
+    .alert .inner {
+        display: block;
+        padding: 6px;
+        margin: 6px;
+        background-color: orange;
+        border:none;
+        text-align:center;
+    }
+
+    /* could not figure out Css grid for relative positioning, just used bug positioning for iframe */ 
+    iframe{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
