@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ex4722.github.io/about/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/</loc>
+    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/cheatsheets/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/cheatsheets/pwntools-quickref/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/posts/2022/holy-grail-of-rop/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/posts/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/posts/2022/gibson-format-strings-on-s390x/</loc>
+    <lastmod>2022-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ex4722.github.io/posts/2022/16-bit-xor-only-shellcoding/</loc>
+    <lastmod>2022-06-10T00:00:00+00:00</lastmod>
+  </url>
+</urlset>

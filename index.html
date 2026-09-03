@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <script src="app.js"></script>
-        <title>Document</title>
-    </head>
-
-    <body onload="init()" id="body">
-        <h1>Bugz Splat</h1>
-        <div class="alert info">
-            <p class="inner" id="msg">
-            Click Play Game to begin 
-            </p>
-        </div>
-        <button onclick="start()"> Play Game </button>
-
-        <iframe id="video" width="559" height="315" src="https://www.youtube.com/embed/mfr-7Zplae8?clip=UgkxKmEJHeWo7H_nPx1ecZ17K8W_ECFVwXbW&amp;clipt=ENi-BhjG9wY&autoplay=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <audio id="splat_audio" src="./splat2ogg-14668.mp3"></audio>
-    </body>
-</html>
+<!doctype html><html lang=en class=no-js data-theme=dark><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>eddie xiao — vulnerability research · ctf · embedded network stacks</title><meta name=description content="vulnerability research · ctf · embedded network stacks"><meta name=generator content="Hugo 0.165.0"><link rel=canonical href=https://ex4722.github.io/><link rel=alternate type=application/rss+xml href=https://ex4722.github.io/feed.xml title="eddie xiao"><link rel=preload href=https://ex4722.github.io/fonts/jbmono-variable.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/main.55f9f4ccba10162775595233ceb1d4b6b96f2b719e755025522767a7ec21aef5.css integrity="sha256-Vfn0zLoQFid1WVIzzrHUtrlvK3GedVAlUidnp+whrvU="><script>(function(){var e=localStorage.getItem("theme");e||(e=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"),document.documentElement.setAttribute("data-theme",e),document.documentElement.classList.remove("no-js"),document.documentElement.classList.add("js")})()</script><link rel=pgp-key href=/pgp.txt></head><body><div class=page-terminal><main id=main class=term-page><div class=term-line><span class=prompt-arrow aria-hidden=true>&#10148;</span> <span class=prompt-dir>~</span> <span class=prompt-cmd>whoami</span></div><div class="term-out term-name">eddie xiao</div><div class="term-out term-tagline">vulnerability research · ctf · embedded network stacks</div><div class=term-line><span class=prompt-arrow aria-hidden=true>&#10148;</span> <span class=prompt-dir>~</span> <span class=prompt-cmd>ls -lt posts/</span></div><div class=term-ls><ul class=post-list><li class=post-list-row data-cat=cheat><a href=/cheatsheets/pwntools-quickref/ style=--cat-color:#2aa198><span class=post-list-date>2022-09-01</span>
+<span class=post-list-cat>cheat</span>
+<span class=post-list-meta><span class=post-list-meta-cat>CHEAT</span> &#183; 2022-09-01 &#183; 0 MIN</span>
+<span class=post-list-title>pwntools quickref</span></a></li><li class=post-list-row data-cat=pwn><a href=/posts/2022/holy-grail-of-rop/ style=--cat-color:#b58900><span class=post-list-date>2022-08-15</span>
+<span class=post-list-cat>pwn</span>
+<span class=post-list-meta><span class=post-list-meta-cat>PWN</span> &#183; 2022-08-15 &#183; 28 MIN</span>
+<span class=post-list-title>Holy Grail of ROP</span></a></li><li class=post-list-row data-cat=pwn><a href=/posts/2022/gibson-format-strings-on-s390x/ style=--cat-color:#b58900><span class=post-list-date>2022-07-25</span>
+<span class=post-list-cat>pwn</span>
+<span class=post-list-meta><span class=post-list-meta-cat>PWN</span> &#183; 2022-07-25 &#183; 14 MIN</span>
+<span class=post-list-title>Gibson: format strings on s390x</span></a></li><li class=post-list-row data-cat=pwn><a href=/posts/2022/16-bit-xor-only-shellcoding/ style=--cat-color:#b58900><span class=post-list-date>2022-06-10</span>
+<span class=post-list-cat>pwn</span>
+<span class=post-list-meta><span class=post-list-meta-cat>PWN</span> &#183; 2022-06-10 &#183; 8 MIN</span>
+<span class=post-list-title>16-Bit: XOR-only shellcoding</span></a></li></ul></div><div class="term-out term-dim">4 files</div><div class=term-line><span class=prompt-arrow aria-hidden=true>&#10148;</span> <span class=prompt-dir>~</span> <span class=prompt-cmd>cat menu.txt</span></div><div class="term-out term-menu"><a href=/about/>:about</a>
+<a href=/cheatsheets/>:cheat</a>
+<a href=/feed.xml>:rss</a></div></main><div class=statusline style=--mode:var(--mode-shell)><a class=mode href=/>SHELL</a></div></div><div class=palette-backdrop data-palette-backdrop></div><div class=palette id=cmd-palette role=dialog aria-modal=true aria-label="Command palette"><div class=palette-handle-row><span class=palette-handle></span></div><div class=palette-input-row><span class=colon aria-hidden=true>:</span>
+<input class=palette-input id=palette-input type=text autocomplete=off autocapitalize=off spellcheck=false aria-label=Command></div><div class=palette-results role=listbox aria-label=Commands id=palette-results><a class=palette-row role=option data-cmd=:posts data-desc="all write-ups" href=/posts/ style=color:#b58900><span class=cmd style=width:76px;flex:none>:posts</span><span class=desc>all write-ups</span>
+</a><a class=palette-row role=option data-cmd=:cheat data-desc="cheatsheet index" href=/cheatsheets/ style=color:#2aa198><span class=cmd style=width:76px;flex:none>:cheat</span><span class=desc>cheatsheet index</span>
+</a><a class=palette-row role=option data-cmd=:about data-desc="who's typing" href=/about/ style=color:#d33682><span class=cmd style=width:76px;flex:none>:about</span><span class=desc>who's typing</span>
+</a><a class=palette-row role=option data-cmd=:theme data-desc="light / dark" href=# data-action=theme style=color:#6c71c4><span class=cmd style=width:76px;flex:none>:theme</span><span class=desc>light / dark</span>
+</a><a class=palette-row role=option data-cmd=:rss data-desc=subscribe href=/feed.xml style=color:#268bd2><span class=cmd style=width:76px;flex:none>:rss</span><span class=desc>subscribe</span></a></div></div><nav class=palette-fallback aria-label=Site><ul><li><a href=/posts/>:posts</a> — all write-ups</li><li><a href=/cheatsheets/>:cheat</a> — cheatsheet index</li><li><a href=/about/>:about</a> — who's typing</li><li><a href=#>:theme</a> — light / dark</li><li><a href=/feed.xml>:rss</a> — subscribe</li></ul></nav><div class=lightbox id=lightbox aria-hidden=true><div class=lightbox-body><img id=lightbox-img src alt><div class=lightbox-cap id=lightbox-cap></div></div><div class=statusline><span class=mode style=--mode:var(--mode-zoom)>ZOOM</span>
+<span class=file>h/l next &#183; q close</span>
+<span class="cell cell--auto cell--chrome" id=lightbox-count>1/1</span></div></div><script src=/js/bundle.e64d1a1fd7dd93ee47fdcbd5c0b75bb8422ad5f9ec5ad0ee69b531c9887d1a9f.js integrity="sha256-5k0aH9fdk+5H/cvVwLdbuEIq1fnsWtDuabUxyYh9Gp8=" defer></script></body></html>

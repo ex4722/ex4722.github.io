@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>eddie xiao</title>
+		<link>https://ex4722.github.io/</link>
+		<description>Recent content on eddie xiao</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ex4722.github.io/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>About</title>
+				<link>https://ex4722.github.io/about/</link>
+				<pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://ex4722.github.io/about/</guid>
+				<description>&lt;p&gt;A boutique vulnerability researcher and CTF player at heart.&lt;/p&gt;&#xA;&lt;p&gt;Interests include mobile devices, weird machines, networking equipment&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>pwntools quickref</title>
+				<link>https://ex4722.github.io/cheatsheets/pwntools-quickref/</link>
+				<pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+				<guid>https://ex4722.github.io/cheatsheets/pwntools-quickref/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Holy Grail of ROP</title>
+				<link>https://ex4722.github.io/posts/2022/holy-grail-of-rop/</link>
+				<pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+				<guid>https://ex4722.github.io/posts/2022/holy-grail-of-rop/</guid>
+				<description>&lt;p&gt;&lt;em&gt;The ROP God has tasked King Arthur with finding the function called &amp;quot;holy_grail&amp;quot;. You must aid him on his quest! But be warned, the way is guarded by a text-based sorcerer whom loves old British comedy movies, and just to make things harder, you&#39;re going to have to find &amp;quot;holy_grail&amp;quot; 3 times! ...Or was it 5 times? Use your pwning knowledge to answer the sorcerer&#39;s questions and ROP your way to the holy grail and bring this holy relic home for the glory of England!&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Gibson: format strings on s390x</title>
+				<link>https://ex4722.github.io/posts/2022/gibson-format-strings-on-s390x/</link>
+				<pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
+				<guid>https://ex4722.github.io/posts/2022/gibson-format-strings-on-s390x/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&amp;quot;Can you really call it a &amp;quot;main&amp;quot;frame if I haven&#39;t used it before now?&amp;quot;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Author:crandyman&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;No remote connection, Manual Submission Only&lt;/p&gt;&#xA;&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;&#xA;&lt;p&gt;Leaks with Format String&amp;gt; ROP With BOF&#xA;OR&#xA;Leaks with Format String&amp;gt; GOT Overwrite&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;This challenge was a hard pwn from US Cyber Open. The exploit was actually not that complicated but the fact that it used the s390 architecture made it challenging. The lack of decent documentation and tooling support made this challenge unfamiliar and getting the local environment to work was a pain.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>16-Bit: XOR-only shellcoding</title>
+				<link>https://ex4722.github.io/posts/2022/16-bit-xor-only-shellcoding/</link>
+				<pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
+				<guid>https://ex4722.github.io/posts/2022/16-bit-xor-only-shellcoding/</guid>
+				<description>&lt;p&gt;&lt;em&gt;During the ICC competition we where given a shellcoding challenge to make a base64 encoded shellcode, ie the shellcode could only consist of the characters &amp;quot;a-zA-Z0-9+/=&amp;quot;, during an 8 hour ctf we completed it in about 1.5 hours. How long will it take you to create base16 shellcode?&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Provided: chal + libc.so.6&lt;/p&gt;&#xA;&lt;p&gt;tl;dr: Xor the hell out of everything&lt;/p&gt;&#xA;&lt;p&gt;Disclaimer: I did not solve this challenge during the CTF. After the CTF ended skimmed over these writeups and chatted with another solver. My approach was pretty similar to the second writeup.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
