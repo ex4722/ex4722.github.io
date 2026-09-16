@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>eddie xiao</title>
-		<link>https://ex4722.github.io/</link>
+		<link>https://eddiexiao.com/</link>
 		<description>Recent content on eddie xiao</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -10,43 +10,50 @@
 		
 		
 		
-			<lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Wed, 16 Sep 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://ex4722.github.io/feed.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://eddiexiao.com/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Kernel Exploitation: Notes and Resources</title>
+				<link>https://eddiexiao.com/posts/2026/kernel-exploitation-notes-and-resources/</link>
+				<pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://eddiexiao.com/posts/2026/kernel-exploitation-notes-and-resources/</guid>
+				<description>&lt;p&gt;Kernel exploitation is a different beast from userland pwn — new mitigations, a new debugging workflow, and a much smaller pool of accessible writeups. This is less a polished writeup and more a running dump of what I&#39;ve collected so far while learning it. I&#39;ll keep updating this as I go.&lt;/p&gt;&#xA;&lt;h2 id=&#34;kernel-for-ctfs&#34;&gt;Kernel for CTFs&lt;/h2&gt;&#xA;&lt;p&gt;A few resources that have been worth their weight in gold so far:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/yuawn/kernel-exploitation?slide=1&#34;&gt;Kernel Exploitation slides&lt;/a&gt; — slides are in Chinese, but it&#39;s a goldmine of commands&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/smallkirby/kernelpwn&#34;&gt;smallkirby/kernelpwn&lt;/a&gt; — a collection of past CTF kernel pwn examples&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/&#34;&gt;Linux Kernel Pwn, Part 1&lt;/a&gt; — a 3-part writeup that gradually builds up protections with great explanations along the way&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://duasynt.com/blog/linux-kernel-heap-spray&#34;&gt;Heap spray on the Linux kernel&lt;/a&gt; — heap spray techniques&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;kernel-heap-overflow&#34;&gt;Kernel Heap Overflow&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.jikos.cz/jikos/Kmalloc_Internals.html&#34;&gt;Kmalloc Internals&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://argp.github.io/2012/01/03/linux-kernel-heap-exploitation/&#34;&gt;Linux Kernel Heap Exploitation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;cheatsheets&#34;&gt;Cheatsheets&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://anhtai.me/linux-kernel-exploit-cheetsheet/&#34;&gt;Linux Kernel Exploit Cheatsheet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ptr-yudai.hatenablog.com/entry/2020/03/16/165628&#34;&gt;ptr-yudai&#39;s kernel exploitation notes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;to-read&#34;&gt;To Read&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://blog.includesecurity.com/2014/06/exploiting-cve-2014-0196-a-walk-through-of-the-linux-pty-race-condition-poc/&#34;&gt;Exploiting CVE-2014-0196: the Linux PTY race condition&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://devilinside.me/blogs/small-steps-kernel-exploitation&#34;&gt;Small steps in kernel exploitation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://googleprojectzero.blogspot.com/2021/10/how-simple-linux-kernel-memory.html&#34;&gt;How a simple Linux kernel memory corruption bug can lead to complete system compromise&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Learn how to use raw C instead of leaning on pwntools&lt;/li&gt;&#xA;&lt;li&gt;Figure out how to build a kernel with debug info enabled&lt;/li&gt;&#xA;&lt;li&gt;Figure out why GDB reports wrong addresses&lt;/li&gt;&#xA;&lt;li&gt;Figure out the GDB step/breakpoint bug&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;building-a-kernel-yourself-and-gdb&#34;&gt;Building a Kernel Yourself, and GDB&lt;/h2&gt;&#xA;&lt;p&gt;Notes from &lt;a href=&#34;https://github.com/smallkirby/kernelpwn/tree/master/start-kernel-pwning&#34;&gt;smallkirby/kernelpwn&#39;s start-kernel-pwning guide&lt;/a&gt; and &lt;a href=&#34;https://smallkirby.hatenablog.com/entry/2020/07/23/221605&#34;&gt;smallkirby&#39;s blog post&lt;/a&gt;:&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>About</title>
-				<link>https://ex4722.github.io/about/</link>
+				<link>https://eddiexiao.com/about/</link>
 				<pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-				<guid>https://ex4722.github.io/about/</guid>
+				<guid>https://eddiexiao.com/about/</guid>
 				<description>&lt;p&gt;A boutique vulnerability researcher and CTF player at heart.&lt;/p&gt;&#xA;&lt;p&gt;Interests include mobile devices, weird machines, networking equipment&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>pwntools quickref</title>
-				<link>https://ex4722.github.io/cheatsheets/pwntools-quickref/</link>
+				<link>https://eddiexiao.com/cheatsheets/pwntools-quickref/</link>
 				<pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
-				<guid>https://ex4722.github.io/cheatsheets/pwntools-quickref/</guid>
+				<guid>https://eddiexiao.com/cheatsheets/pwntools-quickref/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Holy Grail of ROP</title>
-				<link>https://ex4722.github.io/posts/2022/holy-grail-of-rop/</link>
+				<link>https://eddiexiao.com/posts/2022/holy-grail-of-rop/</link>
 				<pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-				<guid>https://ex4722.github.io/posts/2022/holy-grail-of-rop/</guid>
-				<description>&lt;p&gt;&lt;em&gt;The ROP God has tasked King Arthur with finding the function called &amp;quot;holy_grail&amp;quot;. You must aid him on his quest! But be warned, the way is guarded by a text-based sorcerer whom loves old British comedy movies, and just to make things harder, you&#39;re going to have to find &amp;quot;holy_grail&amp;quot; 3 times! ...Or was it 5 times? Use your pwning knowledge to answer the sorcerer&#39;s questions and ROP your way to the holy grail and bring this holy relic home for the glory of England!&lt;/em&gt;&lt;/p&gt;</description>
+				<guid>https://eddiexiao.com/posts/2022/holy-grail-of-rop/</guid>
+				<description>&lt;p&gt;&lt;em&gt;The ROP God has tasked King Arthur with finding the function called &amp;quot;holy_grail&amp;quot;. You must aid him on his quest! But be warned, the way is guarded by a text-based sorcerer who loves old British comedy movies, and just to make things harder, you&#39;re going to have to find &amp;quot;holy_grail&amp;quot; 3 times! ...Or was it 5 times? Use your pwning knowledge to answer the sorcerer&#39;s questions and ROP your way to the holy grail and bring this holy relic home for the glory of England!&lt;/em&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Gibson: format strings on s390x</title>
-				<link>https://ex4722.github.io/posts/2022/gibson-format-strings-on-s390x/</link>
+				<link>https://eddiexiao.com/posts/2022/gibson-format-strings-on-s390x/</link>
 				<pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
-				<guid>https://ex4722.github.io/posts/2022/gibson-format-strings-on-s390x/</guid>
+				<guid>https://eddiexiao.com/posts/2022/gibson-format-strings-on-s390x/</guid>
 				<description>&lt;p&gt;&lt;strong&gt;&amp;quot;Can you really call it a &amp;quot;main&amp;quot;frame if I haven&#39;t used it before now?&amp;quot;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Author:crandyman&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;No remote connection, Manual Submission Only&lt;/p&gt;&#xA;&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;&#xA;&lt;p&gt;Leaks with Format String&amp;gt; ROP With BOF&#xA;OR&#xA;Leaks with Format String&amp;gt; GOT Overwrite&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;This challenge was a hard pwn from US Cyber Open. The exploit was actually not that complicated but the fact that it used the s390 architecture made it challenging. The lack of decent documentation and tooling support made this challenge unfamiliar and getting the local environment to work was a pain.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>16-Bit: XOR-only shellcoding</title>
-				<link>https://ex4722.github.io/posts/2022/16-bit-xor-only-shellcoding/</link>
+				<link>https://eddiexiao.com/posts/2022/16-bit-xor-only-shellcoding/</link>
 				<pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
-				<guid>https://ex4722.github.io/posts/2022/16-bit-xor-only-shellcoding/</guid>
-				<description>&lt;p&gt;&lt;em&gt;During the ICC competition we where given a shellcoding challenge to make a base64 encoded shellcode, ie the shellcode could only consist of the characters &amp;quot;a-zA-Z0-9+/=&amp;quot;, during an 8 hour ctf we completed it in about 1.5 hours. How long will it take you to create base16 shellcode?&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Provided: chal + libc.so.6&lt;/p&gt;&#xA;&lt;p&gt;tl;dr: Xor the hell out of everything&lt;/p&gt;&#xA;&lt;p&gt;Disclaimer: I did not solve this challenge during the CTF. After the CTF ended skimmed over these writeups and chatted with another solver. My approach was pretty similar to the second writeup.&lt;/p&gt;</description>
+				<guid>https://eddiexiao.com/posts/2022/16-bit-xor-only-shellcoding/</guid>
+				<description>&lt;p&gt;&lt;em&gt;During the ICC competition we were given a shellcoding challenge to make a base64-encoded shellcode, i.e. the shellcode could only consist of the characters &amp;quot;a-zA-Z0-9+/=&amp;quot;, during an 8-hour CTF we completed it in about 1.5 hours. How long will it take you to create base16 shellcode?&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Provided: chal + libc.so.6&lt;/p&gt;&#xA;&lt;p&gt;tl;dr: Xor the hell out of everything&lt;/p&gt;&#xA;&lt;p&gt;Disclaimer: I did not solve this challenge during the CTF. After the CTF ended, I skimmed over these writeups and chatted with another solver. My approach was pretty similar to the second writeup.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
