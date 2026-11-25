@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Cheatsheets on eddie xiao</title>
-		<link>https://eddiexiao.com/cheatsheets/</link>
+		<link>http://localhost:1313/cheatsheets/</link>
 		<description>Recent content in Cheatsheets on eddie xiao</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://eddiexiao.com/cheatsheets/feed.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/cheatsheets/feed.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>pwntools quickref</title>
-				<link>https://eddiexiao.com/cheatsheets/pwntools-quickref/</link>
+				<link>http://localhost:1313/cheatsheets/pwntools-quickref/</link>
 				<pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
-				<guid>https://eddiexiao.com/cheatsheets/pwntools-quickref/</guid>
+				<guid>http://localhost:1313/cheatsheets/pwntools-quickref/</guid>
 				<description></description>
 			</item>
 	</channel>
