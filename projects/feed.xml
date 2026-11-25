@@ -1,38 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Projects on eddie xiao</title>
-		<link>http://localhost:1313/projects/</link>
-		<description>Recent content in Projects on eddie xiao</description>
-		<generator>Hugo</generator>
-		<language>en-US</language>
-		
-		
-		
-		
-			<lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/projects/feed.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Athena</title>
-				<link>http://localhost:1313/athena/</link>
-				<pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/athena/</guid>
-				<description>&lt;p&gt;Athena is a personal, self-hosted productivity system built by Eddie Xiao to manage his own calendar, tasks, email, and notes in one place.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-it-does&#34;&gt;What it does&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Capture and organize:&lt;/strong&gt; sorts quick notes and ideas into tasks, calendar events, and a personal knowledge base.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Calendar and tasks:&lt;/strong&gt; reads a designated Google Calendar and Google Tasks inbox, and creates or updates events and tasks, such as deadlines, flights, and bill due dates.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email triage:&lt;/strong&gt; reads Gmail (read-only) to summarize and categorize messages, and files receipts, bills, and tickets into a private document archive.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Search:&lt;/strong&gt; one search across notes and documents.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Athena is used only by its developer. It is not a public service and has no sign-up.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Athena - Privacy Policy</title>
-				<link>http://localhost:1313/athena/privacy/</link>
-				<pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/athena/privacy/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Effective date:&lt;/strong&gt; November 24, 2026&#xA;&lt;strong&gt;Last updated:&lt;/strong&gt; November 24, 2026&lt;/p&gt;&#xA;&lt;p&gt;Athena (&amp;quot;the App&amp;quot;) is a personal, self-hosted productivity system built and operated by Eddie Xiao (&amp;quot;I&amp;quot;, &amp;quot;me&amp;quot;). It is used only by its developer to manage his own calendar, tasks, email, and notes. It is not offered as a commercial service and is not available to the public for sign-up.&lt;/p&gt;&#xA;&lt;p&gt;This policy explains how Athena accesses, uses, stores, and shares data received from Google APIs and other sources.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Athena - Terms of Service</title>
-				<link>http://localhost:1313/athena/terms/</link>
-				<pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/athena/terms/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Effective date:&lt;/strong&gt; November 24, 2026&lt;/p&gt;&#xA;&lt;p&gt;These terms govern use of Athena (&amp;quot;the App&amp;quot;), a personal, self-hosted productivity system operated by Eddie Xiao.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-nature-of-the-service&#34;&gt;1. Nature of the service&lt;/h2&gt;&#xA;&lt;p&gt;Athena is a personal tool built for and used by its developer. It is not a commercial product, has no public sign-up, and is provided free of charge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-authorized-use&#34;&gt;2. Authorized use&lt;/h2&gt;&#xA;&lt;p&gt;Only accounts the developer owns or explicitly authorizes may connect to Athena. Do not attempt to access the App, its servers, or its data without authorization.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Projects on eddie xiao</title>
+    <link>https://eddiexiao.com/projects/</link>
+    <description>Vulnerability research, CTF write-ups, and cheatsheets.</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://eddiexiao.com/projects/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Athena</title>
+      <link>https://eddiexiao.com/athena/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://eddiexiao.com/athena/</guid>
+      <category>writeup</category>
+      <description>&lt;p&gt;Athena is a personal, self-hosted productivity system built by Eddie Xiao to manage his own calendar, tasks, email, and notes in one place.&lt;/p&gt;
+&lt;h2 id=&#34;what-it-does&#34;&gt;What it does&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Capture and organize:&lt;/strong&gt; sorts quick notes and ideas into tasks, calendar events, and a personal knowledge base.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendar and tasks:&lt;/strong&gt; reads a designated Google Calendar and Google Tasks inbox, and creates or updates events and tasks, such as deadlines, flights, and bill due dates.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email triage:&lt;/strong&gt; reads Gmail (read-only) to summarize and categorize messages, and files receipts, bills, and tickets into a private document archive.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search:&lt;/strong&gt; one search across notes and documents.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Athena is used only by its developer. It is not a public service and has no sign-up.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Athena - Privacy Policy</title>
+      <link>https://eddiexiao.com/athena/privacy/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://eddiexiao.com/athena/privacy/</guid>
+      <category>writeup</category>
+      <description>&lt;p&gt;&lt;strong&gt;Effective date:&lt;/strong&gt; November 24, 2026
+&lt;strong&gt;Last updated:&lt;/strong&gt; November 24, 2026&lt;/p&gt;
+&lt;p&gt;Athena (&amp;quot;the App&amp;quot;) is a personal, self-hosted productivity system built and operated by Eddie Xiao (&amp;quot;I&amp;quot;, &amp;quot;me&amp;quot;). It is used only by its developer to manage his own calendar, tasks, email, and notes. It is not offered as a commercial service and is not available to the public for sign-up.&lt;/p&gt;
+&lt;p&gt;This policy explains how Athena accesses, uses, stores, and shares data received from Google APIs and other sources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Athena - Terms of Service</title>
+      <link>https://eddiexiao.com/athena/terms/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://eddiexiao.com/athena/terms/</guid>
+      <category>writeup</category>
+      <description>&lt;p&gt;&lt;strong&gt;Effective date:&lt;/strong&gt; November 24, 2026&lt;/p&gt;
+&lt;p&gt;These terms govern use of Athena (&amp;quot;the App&amp;quot;), a personal, self-hosted productivity system operated by Eddie Xiao.&lt;/p&gt;
+&lt;h2 id=&#34;1-nature-of-the-service&#34;&gt;1. Nature of the service&lt;/h2&gt;
+&lt;p&gt;Athena is a personal tool built for and used by its developer. It is not a commercial product, has no public sign-up, and is provided free of charge.&lt;/p&gt;
+&lt;h2 id=&#34;2-authorized-use&#34;&gt;2. Authorized use&lt;/h2&gt;
+&lt;p&gt;Only accounts the developer owns or explicitly authorizes may connect to Athena. Do not attempt to access the App, its servers, or its data without authorization.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

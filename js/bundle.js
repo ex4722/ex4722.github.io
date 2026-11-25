@@ -1,7 +1,9 @@
 (function () {
   function apply(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
   }
 
   function toggle() {
@@ -398,9 +400,10 @@
 
   trackHeight(document.querySelector(".statusline"), "--statusline-h");
 
-  // scroll progress + ln/pct on post pages, plus TOC scroll-spy
+  // scroll progress + ln/pct on post pages, pct/Bot on note pages, plus TOC scroll-spy
   var isPost = document.querySelector(".page-post");
-  if (isPost) {
+  var isNote = document.querySelector(".page-note");
+  if (isPost || isNote) {
     var fill = document.getElementById("progress-fill");
     var lnCell = document.getElementById("status-ln");
     var pctCell = document.getElementById("status-pct");
@@ -427,7 +430,7 @@
       var scrollable = doc.scrollHeight - doc.clientHeight;
       var pct = scrollable > 0 ? Math.min(1, Math.max(0, doc.scrollTop / scrollable)) : 0;
       if (fill) fill.style.width = pct * 100 + "%";
-      if (pctCell) pctCell.textContent = Math.round(pct * 100) + "%";
+      if (pctCell) pctCell.textContent = isNote && pct >= 1 ? "Bot" : Math.round(pct * 100) + "%";
       if (lnCell && total) lnCell.textContent = "ln " + Math.max(1, Math.round(pct * total)) + "/" + total;
       updateTocSpy();
     }
@@ -436,28 +439,88 @@
     onScroll();
   }
 
-  // netrw-style cursor on the /posts/ listing: j/k move a highlighted row
-  // instead of scrolling the page, Enter opens it. Desktop only — on mobile
-  // there's no keyboard driving this, so plain touch-scroll stays untouched.
-  var netrwList = document.querySelector(".netrw-list");
-  var netrwEntries = netrwList ? Array.prototype.slice.call(netrwList.querySelectorAll(".netrw-entry")) : [];
-  var netrwIndex = 0;
-  var isDesktop = window.matchMedia("(min-width: 900px)").matches;
+  // feed cursor on the combined /posts/ and /notes/ listings (and the
+  // netrw-style /projects/ listing): j/k move a highlighted row instead of
+  // scrolling the page, Enter opens it. Desktop only — on mobile there's no
+  // keyboard driving this, so plain touch-scroll stays untouched. Rows
+  // hidden by the filter chips (below) are skipped.
+  var feedList = document.querySelector(".feed-list, .netrw-list");
+  var feedIndex = 0;
 
-  function netrwActive() {
-    return netrwEntries.length > 0 && window.matchMedia("(min-width: 900px)").matches;
-  }
-
-  function setNetrwCursor(i) {
-    netrwIndex = Math.max(0, Math.min(netrwEntries.length - 1, i));
-    netrwEntries.forEach(function (el, idx) {
-      el.classList.toggle("is-cursor", idx === netrwIndex);
+  function feedEntries() {
+    if (!feedList) return [];
+    return Array.prototype.slice.call(feedList.querySelectorAll(".post-list-row, .netrw-entry")).filter(function (el) {
+      return !el.hasAttribute("hidden");
     });
-    netrwEntries[netrwIndex].scrollIntoView({ block: "nearest" });
   }
 
-  if (netrwEntries.length && isDesktop) {
-    setNetrwCursor(0);
+  function feedActive() {
+    return feedEntries().length > 0 && window.matchMedia("(min-width: 900px)").matches;
+  }
+
+  function setFeedCursor(i) {
+    var entries = feedEntries();
+    if (!entries.length) return;
+    feedIndex = Math.max(0, Math.min(entries.length - 1, i));
+    entries.forEach(function (el, idx) {
+      el.classList.toggle("is-cursor", idx === feedIndex);
+    });
+    entries[feedIndex].scrollIntoView({ block: "nearest" });
+  }
+
+  if (feedActive()) {
+    setFeedCursor(0);
+  }
+
+  // filter chips (/posts/ only): toggle data-type rows in place and reflect
+  // the choice in the URL via history.replaceState, no reload. Without JS
+  // the chips are plain `?f=` links — a static site can't filter server
+  // side, so the page just renders the full list either way.
+  var feedChips = document.getElementById("feed-chips");
+  if (feedChips && feedList) {
+    var chips = Array.prototype.slice.call(feedChips.querySelectorAll(".feed-chip"));
+    var filterOrder = ["all", "writeup", "note"];
+
+    var applyFilter = function (filter, push) {
+      Array.prototype.slice.call(feedList.querySelectorAll(".post-list-row")).forEach(function (row) {
+        var match = filter === "all" || row.getAttribute("data-type") === filter;
+        if (match) row.removeAttribute("hidden");
+        else row.setAttribute("hidden", "");
+      });
+      chips.forEach(function (c) {
+        c.classList.toggle("is-active", c.getAttribute("data-filter") === filter);
+      });
+      if (push) {
+        var url = new URL(window.location.href);
+        if (filter === "all") url.searchParams.delete("f");
+        else url.searchParams.set("f", filter === "writeup" ? "writeups" : "notes");
+        history.replaceState(null, "", url);
+      }
+      setFeedCursor(0);
+    };
+
+    var currentFilter = function () {
+      var active = chips.filter(function (c) {
+        return c.classList.contains("is-active");
+      })[0];
+      return active ? active.getAttribute("data-filter") : "all";
+    };
+
+    window.__feedCycleFilter = function () {
+      var cur = currentFilter();
+      applyFilter(filterOrder[(filterOrder.indexOf(cur) + 1) % filterOrder.length], true);
+    };
+
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function (e) {
+        e.preventDefault();
+        applyFilter(chip.getAttribute("data-filter"), true);
+      });
+    });
+
+    var initialParam = new URLSearchParams(window.location.search).get("f");
+    if (initialParam === "writeups") applyFilter("writeup", false);
+    else if (initialParam === "notes") applyFilter("note", false);
   }
 
   // neovim-style buffer navigation: h/j/k/l scroll, gg/G jump to top/bottom,
@@ -530,19 +593,28 @@
     var typing = tag === "INPUT" || tag === "TEXTAREA" || document.activeElement.isContentEditable;
     if (typing) return;
     if (document.body.getAttribute("data-palette-open") === "true") return;
+    var focusedInteractive = tag === "A" || tag === "BUTTON";
+    var noModifier = !e.ctrlKey && !e.metaKey && !e.altKey;
 
-    if (netrwActive() && (e.key === "j" || e.key === "k")) {
+    if (feedActive() && !focusedInteractive && (e.key === "j" || e.key === "k")) {
       e.preventDefault();
-      setNetrwCursor(netrwIndex + (e.key === "j" ? 1 : -1));
+      setFeedCursor(feedIndex + (e.key === "j" ? 1 : -1));
       return;
     }
-    if (netrwActive() && e.key === "Enter") {
+    if (feedActive() && !focusedInteractive && e.key === "Enter") {
       e.preventDefault();
-      window.location.assign(netrwEntries[netrwIndex].getAttribute("href"));
+      var current = feedEntries()[feedIndex];
+      var link = current.querySelector("a") || current;
+      window.location.assign(link.getAttribute("href"));
       return;
     }
-    if (netrwActive() && e.key === "G") {
-      setNetrwCursor(netrwEntries.length - 1);
+    if (feedActive() && noModifier && (e.key === "f" || e.key === "F")) {
+      e.preventDefault();
+      if (window.__feedCycleFilter) window.__feedCycleFilter();
+      return;
+    }
+    if (feedActive() && e.key === "G") {
+      setFeedCursor(feedEntries().length - 1);
       return;
     }
 
@@ -567,7 +639,7 @@
     } else if (e.key === "g") {
       var now = Date.now();
       if (now - lastG < 500) {
-        if (netrwActive()) setNetrwCursor(0);
+        if (feedActive()) setFeedCursor(0);
         else smoothScrollTo(scrollTarget.x, 0);
         lastG = 0;
       } else {
@@ -575,4 +647,25 @@
       }
     }
   });
+
+  // essay share button: native share sheet where available, clipboard
+  // copy-link otherwise.
+  var shareBtn = document.getElementById("note-share");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", function () {
+      var url = shareBtn.getAttribute("data-url");
+      var title = shareBtn.getAttribute("data-title");
+      if (navigator.share) {
+        navigator.share({ title: title, url: url }).catch(function () {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function () {
+          var original = shareBtn.textContent;
+          shareBtn.textContent = "copied";
+          setTimeout(function () {
+            shareBtn.textContent = original;
+          }, 1400);
+        });
+      }
+    });
+  }
 })();

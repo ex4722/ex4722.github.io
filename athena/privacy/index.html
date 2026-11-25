@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js" data-theme="dark">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Athena - Privacy Policy · eddie xiao</title>
 <meta name="description" content="Privacy Policy for Athena, a personal productivity system built by Eddie Xiao.">
 <meta name="generator" content="Hugo 0.165.0">
-<link rel="canonical" href="http://localhost:1313/athena/privacy/">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/feed.xml" title="eddie xiao">
+<link rel="canonical" href="https://eddiexiao.com/athena/privacy/">
+<link rel="alternate" type="application/rss+xml" href="https://eddiexiao.com/feed.xml" title="eddie xiao">
+<link rel="alternate" type="application/rss+xml" href="https://eddiexiao.com/notes/feed.xml" title="eddie xiao — notes">
 
-<link rel="preload" href="http://localhost:1313/fonts/jbmono-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://eddiexiao.com/fonts/jbmono-variable.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 
 
-<link rel="stylesheet" href="/css/main.e6d45c88f5650fc558183eaad2d48f47e432a07b1c4771cae8c1a650a65f6b33.css" integrity="sha256-5tRciPVlD8VYGD6q0tSPR&#43;QyoHscR3HK6MGmUKZfazM=">
+<link rel="stylesheet" href="/css/main.7dd864f04f86829f8825da38e3ce338dec4d80ffd8fe0bf5d3ebb9c78aad1024.css" integrity="sha256-fdhk8E&#43;Ggp&#43;IJdo4484zjexNgP/Y/gv10&#43;u5x4qtECQ=">
 
 <script>
 (function () {
-  var t = localStorage.getItem("theme");
-  if (!t) {
-    t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-  }
+  var t = "dark";
+  try {
+    t = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  } catch (e) {}
   document.documentElement.setAttribute("data-theme", t);
   document.documentElement.classList.remove("no-js");
   document.documentElement.classList.add("js");
@@ -195,6 +200,12 @@ Website: <a href="https://eddiexiao.com/athena">https://eddiexiao.com/athena</a>
       <span class="cmd" style="width:76px;flex:none">:projects</span><span class="desc">things I&#39;ve built</span>
     </a>
     
+    <a class="palette-row" role="option" data-cmd=":notes" data-desc="essays"
+       href="/notes/"
+       style="color: #a3a7e4">
+      <span class="cmd" style="width:76px;flex:none">:notes</span><span class="desc">essays</span>
+    </a>
+    
     <a class="palette-row" role="option" data-cmd=":cheat" data-desc="cheatsheet index"
        href="/cheatsheets/"
        style="color: #2aa198">
@@ -229,6 +240,8 @@ Website: <a href="https://eddiexiao.com/athena">https://eddiexiao.com/athena</a>
     
     <li><a href="/projects/">:projects</a> — things I&#39;ve built</li>
     
+    <li><a href="/notes/">:notes</a> — essays</li>
+    
     <li><a href="/cheatsheets/">:cheat</a> — cheatsheet index</li>
     
     <li><a href="/about/">:about</a> — who&#39;s typing</li>
@@ -257,7 +270,8 @@ Website: <a href="https://eddiexiao.com/athena">https://eddiexiao.com/athena</a>
 
 
 
-  <script src="/js/bundle.js" defer></script>
+  
+  <script src="/js/bundle.eff84b1dcdb3edececc00df91f44c30a85be9a6c35b3031777c5e320fa6cf780.js" integrity="sha256-7/hLHc2z7ezswA35H0TDCoW&#43;mmw1swMXd8XjIPps94A=" defer></script>
 
 </body>
 </html>
